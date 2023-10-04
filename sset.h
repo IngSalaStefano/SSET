@@ -3,7 +3,7 @@
 
 #include <QDebug>
 
-namespace SSET
+namespace SSET //Stefano Sala Electronic Toolkit
 {
 class SSET_c //qui _c sta per classe...
 {
