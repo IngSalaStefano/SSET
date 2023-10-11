@@ -33,7 +33,7 @@
    <widget class="QLineEdit" name="lineEdit_var_b">
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>100</x>
       <y>310</y>
       <width>31</width>
       <height>22</height>
@@ -46,7 +46,7 @@
    <widget class="QPushButton" name="pushButton_Set_Vars">
     <property name="geometry">
      <rect>
-      <x>140</x>
+      <x>190</x>
       <y>310</y>
       <width>71</width>
       <height>24</height>
@@ -75,14 +75,14 @@
    <widget class="QLineEdit" name="lineEdit_var_a">
     <property name="geometry">
      <rect>
-      <x>90</x>
+      <x>60</x>
       <y>310</y>
       <width>31</width>
       <height>22</height>
      </rect>
     </property>
     <property name="text">
-     <string>0</string>
+     <string>5</string>
     </property>
    </widget>
    <widget class="QWidget" name="layoutWidget">
@@ -114,6 +114,19 @@
      </item>
     </layout>
    </widget>
+   <widget class="QLineEdit" name="lineEdit_var_c">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>310</y>
+      <width>31</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>4.57</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -121,7 +134,7 @@
      <x>0</x>
      <y>0</y>
      <width>506</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>

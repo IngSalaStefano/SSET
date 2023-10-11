@@ -3,14 +3,14 @@
 #include <QNetworkInterface>
 ////
 #include "sset.h"
-using namespace SSET;
+using namespace SSET_NS;
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     this->setWindowTitle(SOFTWARE_NAME " v" SOFTWARE_VERSION);
 
-    SSET = new SSET_c();
+    class SSET SSET;
 }
 
 MainWindow::~MainWindow()
@@ -20,16 +20,20 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_Set_Vars_clicked()
 {
-    SSET->set_a((ui->lineEdit_var_a->text()).toUInt(NULL, 10));
-    SSET->set_b((ui->lineEdit_var_b->text()).toUInt(NULL, 10));
+#if 1
+    SSET.set_a((ui->lineEdit_var_a->text()).toUInt(NULL, 10));
+    SSET.set_b((ui->lineEdit_var_b->text()).toUInt(NULL, 10));
+    SSET.set_c((ui->lineEdit_var_c->text()).toFloat(NULL)); //SSTT best way to get a user-texted float?
 
-    displayLOG("Vars set correctly.");
+    QString str{"Vars set correctly."};
 
-    ui->statusBar->showMessage("Vars set correctly.");
+    display_LOG(str);
+    ui->statusBar->showMessage(str);
+#endif
     return;
 }
 
-void MainWindow::displayLOG(const QString& str)
+void MainWindow::display_LOG(const QString& str)
 {
     ui->textBrowser_LOG->append(str);
 }

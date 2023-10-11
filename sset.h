@@ -1,37 +1,32 @@
 #ifndef SSET_H
 #define SSET_H
 
+#include <QVector>
 #include <QDebug>
 
-namespace SSET //Stefano Sala Electronic Toolkit
+//SSTT chiedere come e se ha senso usare così i namespace...
+namespace SSET_NS //Stefano Sala Electronic Toolkit (NameSpace)
 {
-class SSET_c //qui _c sta per classe...
+class SSET
 {
 public:
-    SSET_c(int _a = 3, int _b = 6) :
-    a {_a},
-    b {_b}
-    {};
-    ~SSET_c() {};
+    SSET(float x = 1.2f, float y = 2.4f, float z = 3.6f) :
+    m_vector{x,y,z} {};
+    ~SSET() {};
 
-    /*<######################################>*/
-    int get_a(void)
-    { return a;}
-
-    void set_a(int _a)
-    { a = _a;}
-
-    /*<######################################>*/
-    int get_b(void)
-    { return b;}
-
-    void set_b(int _b)
-    { b = _b;}
+    int   get_a(void);
+    void  set_a(int _a);
+    int   get_b(void);
+    void  set_b(int _b);
+    float get_c(void);
+    void  set_c(float _c);
 
 private:
-int a;
-int b;
+QVector<float> m_vector{3, 0.0f};
+int   a{1};
+int   b{2};
+float c{3.5};
 };
-} /* namespace SSET */
+} /* namespace SSET_NS */
 
 #endif /* SSET_H */
