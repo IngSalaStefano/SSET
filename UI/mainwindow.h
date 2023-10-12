@@ -12,7 +12,7 @@
 #include <QTcpServer>
 #include <QTcpSocket>
 ////
-#include "sset.h"
+#include "Objects/sset.h"
 using namespace SSET_NS;
 
 namespace Ui {

@@ -71,4 +71,6 @@ Thumbs.db
 *.exe
 
 
-.qtc_clangd
+.qtc_clangd/
+release/
+debug/

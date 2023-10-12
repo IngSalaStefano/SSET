@@ -32,18 +32,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    Objects/sset.cpp \
+    UI/mainwindow.cpp \
     main.cpp \
-    mainwindow.cpp \
-    sset.cpp
 
 HEADERS += \
-    mainwindow.h \
-    sset.h
+    Objects/sset.h \
+    UI/mainwindow.h \
+    UI/ui_mainwindow.h \
 
 INCLUDEPATH += C:\Users\Stefano\Documents\eigen-3.4.0
 
 FORMS += \
-    mainwindow.ui
+    UI/mainwindow.ui \
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
