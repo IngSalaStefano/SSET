@@ -32,21 +32,27 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
-    Objects/sset.cpp \
     UI/mainwindow.cpp \
+    UI/predialog.cpp \
+    Objects/sset.cpp \
     main.cpp \
 
 HEADERS += \
-    Objects/sset.h \
     UI/mainwindow.h \
-    UI/ui_mainwindow.h \
+    UI/predialog.h
+    Objects/sset.h \
 
 INCLUDEPATH += C:\Users\Stefano\Documents\eigen-3.4.0
 
 FORMS += \
     UI/mainwindow.ui \
+    UI/predialog.ui \
+    UI/predialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    note.txt

@@ -1,42 +1,32 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "ui_mainwindow.h"
 #include <QMainWindow>
-#include <QDebug>
-#include <QFile>
-#include <QFileDialog>
-#include <QMessageBox>
-#include <QMetaType>
-#include <QSet>
-#include <QStandardPaths>
-#include <QTcpServer>
-#include <QTcpSocket>
+////
+using namespace std;
 ////
 #include "Objects/sset.h"
 using namespace SSET_NS;
-
-namespace Ui {
-class MainWindow;
-}
 
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    //SSTT explicit vuol dire che devo mettere per forza il tipo? (...boh)
+    //SSTT explicit vuol dire che devo mettere per forza il tipo identico a quello della firma?
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
     void display_LOG(const QString& str);
 
-signals:
+signals: //(triggers!)
 
 private slots:
-    void on_pushButton_Set_Vars_clicked();
+    void on_pushButton_Set_Vars_clicked(void);
 
 private:
-    Ui::MainWindow *ui; //SSTT non ho capito bene il "giro" di ui...
+    Ui::MainWindow ui; //SSTT non ho capito bene il "giro" di ui...
 
     SSET SSET;
 };

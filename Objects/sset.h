@@ -2,7 +2,6 @@
 #define SSET_H
 
 #include <QVector>
-#include <QDebug>
 
 //SSTT chiedere come e se ha senso usare così i namespace...
 namespace SSET_NS //Stefano Sala Electronic Toolkit (NameSpace)
