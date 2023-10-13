@@ -38,6 +38,7 @@ SOURCES += \
     main.cpp \
 
 HEADERS += \
+    Objects/sset.h \
     UI/mainwindow.h \
     UI/predialog.h
     Objects/sset.h \

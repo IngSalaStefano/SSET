@@ -18,17 +18,15 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    void display_LOG(const QString& str);
-
-signals: //(triggers!)
-
 private slots:
     void on_pushButton_Set_Vars_clicked(void);
 
 private:
-    Ui::MainWindow ui; //SSTT non ho capito bene il "giro" di ui...
+    void displayMessage(const QString& str) const;
 
+    Ui::MainWindow ui; //SSTT non ho capito bene il "giro" di ui...
     SSET SSET;
+    int m_INIT_param;
 };
 
 #endif // MAINWINDOW_H

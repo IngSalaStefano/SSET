@@ -12,17 +12,22 @@ int main(int argc, char *argv[])
     unique_ptr<MainWindow> mw;
 
     /*
-     * [local_vars](parameterList) {lambdaBody}
+     * [local_vars](parameterList) -> type {lambdaBody}
+     *
+     * C++11 trailing return type syntax (-> type) eg. -> bool
      */
 
-    //NON è una connect classica signal-->slot.
+    //NON è una connect classica signal-->slot, è tra "oggetti" //SSTT
     QObject::connect(&pd, &PreDialog::INIT_pressed, &pd,
     [&mw, &pd]()
-    {
-     if(!mw) { mw = make_unique<MainWindow>(); }
-         pd.hide();
-         mw->show();
-    }
+     {
+      if(!mw)
+        {
+          mw = make_unique<MainWindow>();
+        }
+          pd.hide();
+          mw->show();
+     }
     );
 
     pd.show();

@@ -6,12 +6,13 @@
 //SSTT chiedere come e se ha senso usare così i namespace...
 namespace sset //Stefano Sala Electronic Toolkit (NameSpace)
 {
+
 class SSET
 {
 public:
-    SSET(float x = 1.2f, float y = 2.4f, float z = 3.6f) :
-    m_vector{x,y,z} {};
-    ~SSET() {};
+    //SSTT i default parameter "possono stare" solo nell'header?
+    explicit SSET(float x = 1.2f, float y = 2.4f, float z = 3.6f);
+    ~SSET();
 
     int   get_a(void) const;
     void  set_a(int _a);
@@ -21,11 +22,12 @@ public:
     void  set_c(float _c);
 
 private:
-QVector<float> m_vector{3, 0.0f};
-int   a{1};
-int   b{2};
-float c{3.5};
+    QVector<float> m_vector;
+    int   a;
+    int   b;
+    float c;
 };
+
 } /* namespace SSET_NS */
 
 #endif /* SSET_H */

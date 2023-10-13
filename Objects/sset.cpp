@@ -2,6 +2,18 @@
 
 namespace sset
 {
+
+SSET::SSET(float x, float y, float z) :
+    m_vector{x,y,z},
+    a{0},
+    b{0},
+    c{0.0f}
+{
+
+};
+
+SSET::~SSET() {};
+
 int SSET::get_a(void) const
 { return a;}
 
@@ -19,4 +31,5 @@ float SSET::get_c(void) const
 
 void SSET::set_c(float _c)
 { c = _c;}
+
 } /* namespace SSET_NS */

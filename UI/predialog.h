@@ -16,22 +16,21 @@ public:
     ~PreDialog();
 
 signals:
-void ALT_pressed (QString str);
-void INIT_pressed(QString str);
+    void ALT_pressed (QString str);
+    void INIT_pressed(QString str);
 
 protected:
-void keyReleaseEvent(QKeyEvent* e);
+    void keyReleaseEvent(QKeyEvent* e);
 
 private slots:
     void on_pushButton_INIT_clicked(void);
-    void on_lineEdit_returnPressed (void);
 
 private:
-    Ui::PreDialog ui;
-    size_t m_altPresses{0};
-    int    m_passParam {0};
+    void displayMessage(const QString& str) const;
 
-    void displayMessage(const QString& str);
+    Ui::PreDialog ui;
+    int m_altPresses;
+    int m_passParam;
 };
 
 #endif // PREDIALOG_H
