@@ -2,12 +2,13 @@
 #define SSET_H
 
 #include <QVector>
+#include <QObject>
 
 //SSTT chiedere come e se ha senso usare così i namespace...
 namespace sset //Stefano Sala Electronic Toolkit (NameSpace)
 {
 
-class SSET
+class SSET : public QObject
 {
 public:
     //SSTT i default parameter "possono stare" solo nell'header?

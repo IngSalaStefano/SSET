@@ -14,7 +14,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    //SSTT explicit vuol dire che devo mettere per forza il tipo identico a quello della firma?
+    //Explicit Keyword in C++ is used to mark constructors to not implicitly convert types in C++
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
