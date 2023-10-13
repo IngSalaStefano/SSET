@@ -6,13 +6,26 @@ PreDialog::PreDialog(QWidget *parent) :
 {
     ui.setupUi(this);
 
-    //sender(signal)                       --> receiver(slot)
+    //sender(signal)                   --> receiver(slot)
     connect(this, &PreDialog::ALT_pressed, this, &PreDialog::displayMessage);
 }
 
 PreDialog::~PreDialog()
 {
 
+}
+
+void PreDialog::on_pushButton_INIT_clicked(void)
+{
+    //m_passParam = ui.lineEdit->text().toUInt(NULL, 10);
+    //emit INIT_pressed(QString("INIT !"));
+    return;
+}
+
+void PreDialog::on_lineEdit_returnPressed(void)
+{
+    m_passParam = ui.lineEdit->text().toUInt(NULL, 10);
+    return;
 }
 
 void PreDialog::keyReleaseEvent(QKeyEvent* e)
@@ -24,7 +37,6 @@ void PreDialog::keyReleaseEvent(QKeyEvent* e)
     }
     return;
 }
-
 
 void PreDialog::displayMessage(const QString& str)
 {

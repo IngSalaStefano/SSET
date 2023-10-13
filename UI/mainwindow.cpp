@@ -6,7 +6,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui.setupUi(this);
     this->setWindowTitle(SOFTWARE_NAME " v" SOFTWARE_VERSION);
 
-    class SSET SSET;
+    class SSET SSET; //SSTT avrei detto che non ci voleva la keyword class.
 }
 
 MainWindow::~MainWindow()

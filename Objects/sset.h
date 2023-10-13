@@ -3,8 +3,8 @@
 
 #include <QVector>
 
-//SSTT chiedere come e se ha senso usare cosÃ¬ i namespace...
-namespace SSET_NS //Stefano Sala Electronic Toolkit (NameSpace)
+//SSTT chiedere come e se ha senso usare così i namespace...
+namespace sset //Stefano Sala Electronic Toolkit (NameSpace)
 {
 class SSET
 {
@@ -13,11 +13,11 @@ public:
     m_vector{x,y,z} {};
     ~SSET() {};
 
-    int   get_a(void);
+    int   get_a(void) const;
     void  set_a(int _a);
-    int   get_b(void);
+    int   get_b(void) const;
     void  set_b(int _b);
-    float get_c(void);
+    float get_c(void) const;
     void  set_c(float _c);
 
 private:

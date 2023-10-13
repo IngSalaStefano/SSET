@@ -7,7 +7,7 @@
 using namespace std;
 ////
 #include "Objects/sset.h"
-using namespace SSET_NS;
+using namespace sset;
 
 class MainWindow : public QMainWindow
 {
