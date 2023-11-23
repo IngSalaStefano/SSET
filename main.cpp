@@ -17,7 +17,8 @@ int main(int argc, char *argv[])
      * C++11 trailing return type syntax (-> type) eg. -> bool
      */
 
-    //NON è una connect classica signal-->slot, è tra "oggetti" //SSTT
+    //NON Ã¨ una connect classica signal-->slot, Ã¨ tra "oggetti"
+    //quella classica Ã¨ tra QMetaObject ..? //SSTT
     QObject::connect(&pd, &PreDialog::INIT_pressed, &pd,
     [&mw, &pd]()
      {
